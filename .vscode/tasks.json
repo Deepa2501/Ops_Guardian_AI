@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start OPSGuardian Control Center",
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": [],
+      "isBackground": true,
+      "options": {
+        "env": {
+          "ARMORIQ_MODE": "mock",
+          "AI_PROVIDER": "deterministic"
+        }
+      }
+    },
+    {
+      "label": "Run Dev Server (Vite + Python)",
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "isBackground": true,
+      "options": {
+        "env": {
+          "ARMORIQ_MODE": "mock",
+          "AI_PROVIDER": "deterministic"
+        }
+      }
+    },
+    {
+      "label": "Run Pytest Suite",
+      "type": "shell",
+      "command": "python -m pytest python/tests/ -v",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "options": {
+        "env": {
+          "ARMORIQ_MODE": "mock",
+          "AI_PROVIDER": "deterministic"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Typecheck TypeScript",
+      "type": "npm",
+      "script": "typecheck",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}

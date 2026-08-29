@@ -1,0 +1,6 @@
+{
+  "name": "OpsGuardian AI + ArmorIQ",
+  "description": "Autonomous Operations Agent with Cryptographic Governance and Intent Authorization by ArmorIQ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

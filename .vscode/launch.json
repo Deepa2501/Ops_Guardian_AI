@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "OPSGuardian: Full Stack (Node + Python)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "env": {
+        "ARMORIQ_MODE": "mock",
+        "AI_PROVIDER": "deterministic"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "OPSGuardian: Dev Mode (Vite + FastAPI)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "env": {
+        "ARMORIQ_MODE": "mock",
+        "AI_PROVIDER": "deterministic"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "OPSGuardian: Python Backend Only",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["python.app:app", "--host", "127.0.0.1", "--port", "8001", "--reload"],
+      "env": {
+        "ARMORIQ_MODE": "mock",
+        "AI_PROVIDER": "deterministic",
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}
